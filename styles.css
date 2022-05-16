@@ -36,11 +36,7 @@ header {
 }
 
 main {
-  width: 100%;
-  min-height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 60vh;
 }
 
 .cards-group {
@@ -73,9 +69,62 @@ main {
 
 .card:hover {
   border-radius: 10px;
-  background-color: rgb(76, 122, 221);
+  background-color: #4c7add;
   box-shadow: 0 0 0 #fff;
   color: #fff;
+}
+
+/* accordion */
+.accordion {
+  background-color: #4ade80;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 16px;
+}
+
+.accordion:not(:last-of-type) {
+  border-bottom: 1px solid #89dda8;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background-color: #0f923f;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 1em;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: '+'; /* Unicode character for "plus" sign (+) */
+  font-size: 16px;
+  color: #ffffff;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: '-'; /* Unicode character for "minus" sign (-) */
+}
+
+.list {
+  padding-left: 2em;
+}
+
+.material {
+  margin: 1em 0;
 }
 
 footer {
